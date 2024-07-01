@@ -5,6 +5,7 @@ export default {
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
+
   ],
   theme: {
     extend: {
@@ -23,7 +24,7 @@ export default {
       },
       colors:{
         amazon_blue:"#131921",
-        amazon_light:"#23F3E",
+        amazon_light_blue:"#232f3e",
         amazon_yellow:"#febd69",
         whiteText:"#ffffff",
         ligth_text:"#ccc",
@@ -36,5 +37,6 @@ export default {
       }
     },
   },
-  plugins: [],
+  plugins: [
+  ],
 }
