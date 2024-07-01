@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components{
+    .footerLink{
+        @apply text-sm tracking-wide hover:text-gray-100 cursor-pointer hover:underline 
+    }
+}
