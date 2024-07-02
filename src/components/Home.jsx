@@ -1,11 +1,14 @@
 import React from 'react';
-import {logo} from '../assets/index'
 import Banner from './Banner';
+import Footer from './footer/Footer';
+import Products from './Products';
 
 function Home() {
     return (
         <div>
-           home
+           <Banner/>
+           <Products/>
+           <Footer/>
 
         </div>
     );

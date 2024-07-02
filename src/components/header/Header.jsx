@@ -9,9 +9,10 @@ import { Link } from 'react-router-dom';
 function Header() {
     return (
 
-        <div >
-            {/* -----------------header top --------------- */}
-            <div className='w-full bg-amazon_blue text-white px-6 py-3 flex items-center gap-5 '>
+        <div className='w-full sticky top-0 z-50'>
+          <div>
+              {/* -----------------header top --------------- */}
+              <div className='w-full bg-amazon_blue text-white px-6 py-3 flex items-center gap-5  '>
                 {/* logo div  */}
                 <div className='px-2 h-[80%] flex items-center border border-transparent hover:border-white cursor-pointer'>
                     <img className='w-24 mt-2' src={logo} alt="Logo" />
@@ -58,6 +59,7 @@ function Header() {
 
             </div>
 
+          </div>
             {/* -----------------header bottom --------------- */}
             <div className='w-full bg-amazon_light_blue text-white px-6 py-2 flex items-center gap-5 '>
               <div>all</div>
