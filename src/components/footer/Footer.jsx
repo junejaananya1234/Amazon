@@ -1,12 +1,14 @@
 import React from 'react'
 import FooterTop from './FooterTop'
 import FooterMiddle from './FooterMiddle'
+import FooterBottom from './FooterBottom'
 
 function Footer() {
   return (
     <div className=''>
         <FooterTop/>
         <FooterMiddle/>
+        <FooterBottom/>
     </div>
   )
 }

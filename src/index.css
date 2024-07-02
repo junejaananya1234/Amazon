@@ -4,6 +4,6 @@
 
 @layer components{
     .footerLink{
-        @apply text-sm tracking-wide hover:text-gray-100 cursor-pointer hover:underline 
+        @apply text-sm tracking-wide hover:text-gray-300 cursor-pointer hover:underline 
     }
 }
