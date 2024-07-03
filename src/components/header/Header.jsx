@@ -73,7 +73,9 @@ function Header() {
         <div className='w-full bg-amazon_blue text-white px-6 py-3 flex items-center gap-5'>
           {/* logo div  */}
           <div className='px-2 h-[80%] flex items-center border border-transparent hover:border-white cursor-pointer'>
-            <img className='w-24 mt-2' src={logo} alt="Logo" />
+            <Link to='/'>
+              <img className='w-24 mt-2' src={logo} alt="Logo" />
+            </Link>
           </div>
 
           {/* location div  */}

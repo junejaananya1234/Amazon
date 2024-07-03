@@ -4,6 +4,8 @@ import Header from './components/header/Header'
 import Home from './components/Home'
 import Signin from "./components/Signin"
 import Cart from "./components/Cart"
+import Registration from "./components/Registration"
+import UserProfile from "./components/UserProfile"
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import data from './data'
 
@@ -82,6 +84,8 @@ function App() {
             <Route path="/" element={<Home />}></Route>
             <Route path="/signin" element={<Signin />}></Route>
             <Route path="/cart" element={<Cart />}></Route>
+            <Route path="/registration" element={<Registration />}></Route>
+            <Route path="/userprofile" element={<UserProfile />}></Route>
           </Routes>
         </ecomContext.Provider>
       </BrowserRouter>

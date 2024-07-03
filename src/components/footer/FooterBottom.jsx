@@ -82,7 +82,7 @@ function FooterBottom() {
                     <p>Amazon.com, Inc. or its affiliates</p>
                 </div>
                 <div className='mx-20'> 
-                    <p>All rights reserved <a href="" className=' hover:underline '>@Abhinandan</a></p>
+                    <p>All rights reserved <a href="https://github.com/Abhinandan411" className=' hover:underline '>@Abhinandan</a></p>
                 </div>
                 </div>
             </div>
