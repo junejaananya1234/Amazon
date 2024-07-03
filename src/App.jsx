@@ -68,10 +68,15 @@ function App() {
       setCart([...cart , product])
     }
 
+    function handleDeleteitem(e, product){
+      e.preventDefault();
+      setCart(cart.filter(item => item !== product));
+    }
+
   return (
     <>
       <BrowserRouter>
-        <ecomContext.Provider value={{products , handleAddtoCart , cart , setCart }}>
+        <ecomContext.Provider value={{products , handleAddtoCart , cart , setCart , handleDeleteitem }}>
           <Header />
           <Routes>
             <Route path="/" element={<Home />}></Route>

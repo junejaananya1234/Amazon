@@ -34,6 +34,9 @@ export default {
       boxShadow:{
         textShadow :"0px 0px 32px 1px rgba(199,199,199,1)",
         amazonInput :"0 0 3px 2px rgb(228 121 17/50%)",
+      },
+      boxShadow: {
+        'custom': '0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08)',
       }
     },
   },

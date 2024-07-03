@@ -26,7 +26,7 @@ const Products = () => {
                                 <a href={item.product_url} target="_blank" rel="noopener noreferrer" className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition w-full text-center">View Product</a>
                                 <button
                                  onClick={(e) => handleAddtoCart(e, item)}
-                                 className="bg-yellow-400 text-black px-4 py-2 rounded hover:bg-yellow-500 transition w-full">Add to Cart</button>
+                                 className="bg-[#f3a847] text-black px-4 py-2 rounded hover:bg-[#e69730] transition w-full">Add to Cart</button>
                             </div>
                         </div>
                     )) : <p className="text-center text-gray-500">No products available</p>}

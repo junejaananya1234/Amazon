@@ -1,5 +1,6 @@
 import logo from "./logo.png"
 import InFlag from "./flag-of-india.webp"
+import EmptyCart from "./emptyCart.png"
 import advertizement from './advertizement.jpg'
 import bannerImgOne from './banner/bannerImgOne.jpg'
 import bannerImgTwo from './banner/bannerImgTwo.jpg'
@@ -13,6 +14,7 @@ export{
     bannerImgOne,
     bannerImgTwo,
     bannerImgThree,
-    bannerImgFour
+    bannerImgFour,
+    EmptyCart
 
 }

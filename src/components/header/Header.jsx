@@ -9,7 +9,7 @@ import { ecomContext } from '../../App';
 
 function Header() {
   const { cart } = useContext(ecomContext);
-  console.log(cart.length);
+  // console.log(cart.length);
 
   return (
 
@@ -78,7 +78,7 @@ function Header() {
 
           {/* location div  */}
           <div className='hidden md:inline-flex'>
-            <p className='text-light_text flex items-center'>
+            <p className='text-light_text flex items-center '>
               <LocationOnIcon />
               Deliver to
             </p>
