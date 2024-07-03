@@ -2,7 +2,10 @@ import React from 'react'
 
 function Cart() {
   return (
-    <div>Cart</div>
+    <div className='w-full bg-gray-100 p-4'>
+        div 
+
+    </div>
   )
 }
 

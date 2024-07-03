@@ -5,18 +5,12 @@ import data from '../data'
 
 
 const Products = () => {
- 
-
-
-
-
     const {products , handleAddtoCart} = useContext(ecomContext);
-
     // console.log(products);
 
     return (
         <div>
-            <h1>Products</h1>
+            {/* <h1>Products</h1> */}
             {/* <pre>{JSON.stringify(data, null, 2)}</pre> */}
             <div className="container mx-auto px-4 my-8">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -38,10 +32,6 @@ const Products = () => {
                     )) : <p className="text-center text-gray-500">No products available</p>}
                 </div>
             </div>
-            
-
-            
-
 
         </div>
     );
