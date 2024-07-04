@@ -5,6 +5,8 @@ import { logo } from '../assets/index';
 import ArrowRightIcon from '@mui/icons-material/ArrowRight';
 import { Link } from 'react-router-dom';
 import { auth } from '../firebase'; // Ensure firebase is properly configured
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function Signin() {
   const [email, setEmail] = useState('');
@@ -16,15 +18,19 @@ function Signin() {
 
     try {
       await signInWithEmailAndPassword(auth, email, password);
+      toast.success("Sign in successfully!");
       navigate('/userprofile'); // Redirect to user profile on successful sign-in
+
     } catch (error) {
       console.error('Error signing in:', error);
-      alert(error.message);
+      // alert(error.message);
+      toast.error("Invalid User");
     }
   };
 
   return (
     <div className='w-full'>
+      <ToastContainer />
       <div className='w-full p-4'>
         <form onSubmit={handleSignIn} className='w-[350px] flex flex-col items-center mx-auto'>
           <img className='w-32' src={logo} alt="Logo" />

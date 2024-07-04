@@ -7,6 +7,8 @@ import Cart from "./components/Cart"
 import Registration from "./components/Registration"
 import UserProfile from "./components/UserProfile"
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import data from './data'
 import  axios  from "axios"
 
@@ -77,18 +79,21 @@ function App() {
 
     function handleAddtoCart(e,product){
       e.preventDefault()
-      setCart([...cart , product])
+      setCart([...cart , product]);
+      toast.success("Item added to cart");
     }
 
     function handleDeleteitem(e, product){
       e.preventDefault();
       setCart(cart.filter(item => item !== product));
+      toast.success("Item removed from Cart");
     }
 
   return (
     <>
       <BrowserRouter>
         <ecomContext.Provider value={{products , handleAddtoCart , cart , setCart , handleDeleteitem , }}>
+        <ToastContainer />
           <Header />
           <Routes>
             <Route path="/" element={<Home />}></Route>

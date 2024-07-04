@@ -5,6 +5,8 @@ import { auth } from '../firebase';
 import { logo } from "../assets/index";
 import ArrowRightIcon from '@mui/icons-material/ArrowRight';
 import { Link } from 'react-router-dom';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function Registration() {
   const [userName, setUserName] = useState("");
@@ -16,21 +18,33 @@ function Registration() {
   const handleRegistration = async (e) => {
     e.preventDefault();
     if (userPassword !== userRePassword) {
-      alert("Passwords do not match!");
+      toast.error("Passwords do not match!");
       return;
     }
     try {
       await createUserWithEmailAndPassword(auth, userEmail, userPassword);
-      alert("Account created successfully!");
+      // alert("Account created successfully!");
+      toast.success("Account created successfully!");
       navigate("/signin");  // Navigate to sign-in page after successful registration
     } catch (error) {
       console.error("Error creating account:", error);
-      alert(error.message);
+      toast.error('User already exists')
+      // , {
+      //   position: "top-center",
+      //   autoClose: 5000,
+      //   hideProgressBar: false,
+      //   closeOnClick: true,
+      //   pauseOnHover: true,
+      //   draggable: true,
+      //   progress: undefined,
+      //   theme: "light",
+      // });
     }
   };
 
   return (
     <div className='w-full'>
+      <ToastContainer />
       <div className='w-full pb-10'>
         <form onSubmit={handleRegistration} className='w-[350px] flex flex-col items-center mx-auto'>
           <Link to="/">
