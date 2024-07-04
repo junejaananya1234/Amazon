@@ -110,16 +110,19 @@ function Cart() {
                             )}
                         </div>
                     </div>
-                ) : <div className='flex justify-evenly'>
-                    <div>
+                ) : <div className='flex flex-col lg:flex-row justify-evenly items-center lg:items-start lg:space-x-8 space-y-8 lg:space-y-0'>
+                    <div className='w-full lg:w-auto'>
                         <img className='w-80 rounded-lg p-4 mx-auto' src={EmptyCart} alt="Empty Cart" />
                     </div>
-                    <div className='w-96 p-4 bg-white flex flex-col items-center rounded-md shadow-lg' >
-                        <h1 className='text-xl font-bold'>Your cart is empty </h1>
-                        <p className='mt-2 mb-2 text-center'>Your Shopping cart is lives to serve. Give it purpose - fill it with books, electronocs, gadgets, etc and make it happy :)</p>
-                        <Link to="/" ><button className='bg-[#f3a847] hover:bg-[#e69730] duration-300 px-4 py-2 rounded-md text-white font-semibold mt-2 mb-2'>Continue Shopping</button></Link>
+                    <div className='w-full lg:w-96 p-4 bg-white flex flex-col items-center rounded-md shadow-lg'>
+                        <h1 className='text-xl font-bold'>Your cart is empty</h1>
+                        <p className='mt-2 mb-2 text-center'>Your Shopping cart lives to serve. Give it purpose - fill it with books, electronics, gadgets, etc., and make it happy :)</p>
+                        <Link to="/" >
+                            <button className='bg-[#f3a847] hover:bg-[#e69730] duration-300 px-4 py-2 rounded-md text-white font-semibold mt-2 mb-2'>Continue Shopping</button>
+                        </Link>
                     </div>
                 </div>
+
                 }
 
 

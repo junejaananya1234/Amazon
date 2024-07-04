@@ -70,16 +70,16 @@ function FooterBottom() {
                     </div>
                 </div>
 
-                <div className="flex justify-center gap-4 mt-10 mb-[2px] text-[#DDD] text-[13px] font-semibold">
+                <div className="flex justify-center gap-4 mt-10 mb-[2px] text-[#DDD] text-[11px] font-semibold">
                     <h3>Condition of Use & Sale</h3>
                     <h3>Privacy Notice</h3>
                     <h3>Interest-Based Ads</h3>
                 </div>
                 <div className="text-center">
-                    <h3 className="font-semibold text-[13px] text-[#DDD] mb-[2px]">
+                    <h3 className="font-semibold text-[11px] text-[#DDD] mb-[2px]">
                         © 1996-2023, Amazon.com, Inc. or its affiliates
                     </h3>
-                    <h3 className="font-semibold text-[13px] text-[#DDD] mb-[2px]">
+                    <h3 className="font-semibold text-[11px] text-[#DDD] mb-[2px]">
                         all rightd reserved by: <a className='hover:underline' href="https://github.com/Abhinandan411">Abhinandan</a>
                     </h3>
                 </div>

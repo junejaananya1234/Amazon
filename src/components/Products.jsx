@@ -1,4 +1,3 @@
-import axios from 'axios';
 import React, { useState, useEffect, useContext } from 'react';
 import { ecomContext } from '../App';
 
