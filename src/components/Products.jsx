@@ -1,8 +1,6 @@
 import axios from 'axios';
 import React, { useState, useEffect, useContext } from 'react';
 import { ecomContext } from '../App';
-import data from '../data'
-
 
 const Products = () => {
     const {products , handleAddtoCart} = useContext(ecomContext);
@@ -23,10 +21,10 @@ const Products = () => {
                             <p className="text-yellow-500">Rating: {item.product_star_rating} ★</p>
                             <p className="text-gray-600">Number of Ratings: {item.product_num_ratings}</p>
                             <div className="flex flex-col gap-2 mt-4">
-                                <a href={item.product_url} target="_blank" rel="noopener noreferrer" className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition w-full text-center">View Product</a>
+                                <a href={item.product_url} target="_blank" rel="noopener noreferrer" className="bg-blue-500 text-white font-semibold px-4 py-2 rounded hover:bg-blue-600 transition w-full text-center">View Product</a>
                                 <button
                                  onClick={(e) => handleAddtoCart(e, item)}
-                                 className="bg-[#f3a847] text-black px-4 py-2 rounded hover:bg-[#e69730] transition w-full">Add to Cart</button>
+                                 className="bg-[#f3a847] text-white font-semibold px-4 py-2 rounded hover:bg-[#e69730] transition w-full">Add to Cart</button>
                             </div>
                         </div>
                     )) : <p className="text-center text-gray-500">No products available</p>}
