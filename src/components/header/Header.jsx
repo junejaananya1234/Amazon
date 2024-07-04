@@ -1,85 +1,29 @@
-import React, { useContext } from 'react'
-import { logo } from "../../assets/index"
+import React, { useContext, useState } from 'react';
+import { logo } from "../../assets/index";
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import SearchIcon from '@mui/icons-material/Search';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import { Link } from 'react-router-dom';
 import { ecomContext } from '../../App';
 
-
 function Header() {
-  const { cart } = useContext(ecomContext);
-  // console.log(cart.length);
+  const { cart  } = useContext(ecomContext);
+  const[input,setInput] = useState("");
 
   return (
-
-    // <div className='w-full sticky top-0 z-50'>
-    //   <div>
-    //     {/* -----------------header top --------------- */}
-    //     <div className='w-full bg-amazon_blue text-white px-6 py-3 flex items-center gap-5  '>
-    //       {/* logo div  */}
-    //       <div className='px-2 h-[80%] flex items-center border border-transparent hover:border-white cursor-pointer'>
-    //         <img className='w-24 mt-2' src={logo} alt="Logo" />
-    //       </div>
-
-    //       {/* location div  */}
-    //       <div className='hidden mdl:inline-flex'>
-    //         <p className='text-ligth_text'><LocationOnIcon />Deliver to</p>
-    //         <p> Abhinandan <span>India</span></p>
-    //       </div>
-    //       {/* search div  */}
-    //       <div className='h-10 rounded-md hidden lgl:flex flex-grow relative bg-white '>
-    //         <input className='h-full text-base text-amazon_blue flex-grow outline-none border-none px-2 ' type="text" />
-    //         <span className='h-full w-12 flex items-center justify-center bg-amazon_yellow hover:bg-[#f3a847] duration-300 text-amazon_blue cursor-pointer rounded-tr-md rounded-br-md'>
-    //           <SearchIcon />
-    //         </span>
-    //       </div>
-
-    //       {/* authentication div  */}
-    //       <div>
-    //         <Link to='/signin' className='text-light_text'>Hello, sign in</Link>
-    //         <p className='font-bold hidden mdl:inline-flex'>Accounts and Lists</p>
-    //       </div>
-
-    //       {/* returns div  */}
-    //       <div>
-    //         <p className='text-ligth_text'>Returns</p>
-    //         <p className='font-bold'>&Orders</p>
-    //       </div>
-
-    //       {/* cart div  */}
-    //       <div>
-    //         <Link to="/cart"><ShoppingCartIcon /></Link>
-
-    //         <p className='text-xs font-semibold ,t-3 text-whiteText'>
-    //           Cart  <span className='absolute text-xs top-3  font-semibold bg-amazon_yellow p-0.5 rounded-full text-amazon_blue  '>{cart.length}</span>
-    //         </p>
-
-    //       </div>
-
-    //     </div>
-
-    //   </div>
-    //   {/* -----------------header bottom --------------- */}
-    //   <div className='w-full bg-amazon_light_blue text-white px-6 py-2 flex items-center gap-5 '>
-    //     <div>all</div>
-
-    //   </div>
-    // </div>
-
     <div className='w-full sticky top-0 z-50'>
       <div>
         {/* -----------------header top --------------- */}
         <div className='w-full bg-amazon_blue text-white px-6 py-3 flex items-center gap-5'>
           {/* logo div  */}
-          <div className='px-2 h-[80%] flex items-center border border-transparent hover:border-white cursor-pointer'>
+          <div className='flex items-center text-center border border-transparent hover:border-white cursor-pointer'>
             <Link to='/'>
-              <img className='w-24 mt-2' src={logo} alt="Logo" />
+              <img className='w-24' src={logo} alt="Logo" />
             </Link>
           </div>
 
-          {/* location div  */}
-          <div className='hidden md:inline-flex'>
+          {/* location div - hidden on small screens */}
+          <div className='hidden md:inline-flex flex-col border border-transparent hover:border-white cursor-pointer text-sm '>
             <p className='text-light_text flex items-center '>
               <LocationOnIcon />
               Deliver to
@@ -90,54 +34,57 @@ function Header() {
           </div>
 
           {/* search div  */}
-          <div className='h-10 rounded-md hidden lg:flex flex-grow relative bg-white'>
-            <input
+          <div className='h-10 rounded-md flex flex-grow relative bg-white  '>
+            <input 
               className='h-full text-base text-amazon_blue flex-grow outline-none border-none px-2'
               type="text"
+              // onKeyUp={(e)=>setInput(e.target.value)}
             />
-            <span className='h-full w-12 flex items-center justify-center bg-amazon_yellow hover:bg-[#f3a847] duration-300 text-amazon_blue cursor-pointer rounded-tr-md rounded-br-md'>
+            <span //onClick={()=> calling(input)}
+             className='h-full w-12 flex items-center justify-center bg-amazon_yellow hover:bg-[#f3a847] duration-300 text-amazon_blue cursor-pointer rounded-tr-md rounded-br-md'>
               <SearchIcon />
             </span>
           </div>
 
-          {/* authentication div  */}
-          <div className='hidden sm:flex sm:flex-col sm:items-start'>
+          {/* authentication div - hidden on small screens */}
+          <div className='hidden md:flex md:flex-col md:items-start border border-transparent hover:border-white cursor-pointer'>
             <Link to='/signin' className='text-light_text text-base md:text-sm text-white'>
               Hello, sign in
-            </Link>
-            <p className='font-bold text-sm md:text-base'>
+              <p className='font-bold text-sm md:text-base'>
               Accounts and Lists
             </p>
+            </Link>
+           
           </div>
 
-          {/* returns div  */}
-          <div className='hidden lgl:flex flex-col items-start justify-center '>
+          {/* returns div - hidden on small screens */}
+          <div className='hidden md:flex flex-col items-start justify-center border border-transparent hover:border-white cursor-pointer '>
             <p className='text-light_text'>Returns</p>
             <p className='font-bold'>&Orders</p>
           </div>
 
           {/* cart div  */}
-          <div className='relative flex'>
-            <Link to="/cart">
-              <ShoppingCartIcon />
+          <div className='relative flex items-center border border-transparent hover:border-white cursor-pointer'>
+            <Link to="/cart" className='flex items-center text-whiteText'>
+                <ShoppingCartIcon />
+                <p className='text-sm font-semibold ml-1 mt-2'>
+                    Cart
+                    <span className='absolute right-3 bottom-4 px-2 py-1 text-xs font-semibold bg-amazon_yellow rounded-full text-amazon_blue'>
+                        {cart.length}
+                    </span>
+                </p>
             </Link>
-            <p className='text-sm font-bold mt-3 text-whiteText'>
-              Cart
-              <span className='absolute text-xs flex items-center justify-center -top-2  right-2 w-5 h-5 font-semibold bg-amazon_yellow rounded-full text-amazon_blue'>
-                {cart.length}
-              </span>
-            </p>
-          </div>
+        </div>
         </div>
       </div>
 
-      {/* -----------------header bottom --------------- */}
-      <div className='w-full bg-amazon_light_blue text-white px-6 py-2 flex items-center gap-5'>
+      {/* -----------------header bottom - hidden on small screens --------------- */}
+      <div className='hidden md:flex w-full bg-amazon_light_blue text-white px-6 py-2 items-center gap-5'>
         <div>All</div>
       </div>
     </div>
-
-  )
+  );
 }
 
-export default Header
+export default Header;
+

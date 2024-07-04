@@ -21,7 +21,7 @@ const Products = () => {
                             <p className="text-yellow-500">Rating: {item.product_star_rating} ★</p>
                             <p className="text-gray-600">Number of Ratings: {item.product_num_ratings}</p>
                             <div className="flex flex-col gap-2 mt-4">
-                                <a href={item.product_url} target="_blank" rel="noopener noreferrer" className="bg-blue-500 text-white font-semibold px-4 py-2 rounded hover:bg-blue-600 transition w-full text-center">View Product</a>
+                                <a href={item.product_url} target="_blank" rel="noopener noreferrer" className="bg-amazon_light_blue text-white font-semibold px-4 py-2 rounded hover:bg-amazon_blue transition w-full text-center">View Product</a>
                                 <button
                                  onClick={(e) => handleAddtoCart(e, item)}
                                  className="bg-[#f3a847] text-white font-semibold px-4 py-2 rounded hover:bg-[#e69730] transition w-full">Add to Cart</button>

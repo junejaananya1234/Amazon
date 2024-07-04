@@ -8,6 +8,7 @@ import Registration from "./components/Registration"
 import UserProfile from "./components/UserProfile"
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import data from './data'
+import  axios  from "axios"
 
 
 export const ecomContext = createContext(null);
@@ -17,45 +18,54 @@ function App() {
 
   const [products, setProducts] = useState([]);
   const [cart , setCart] = useState([]);
+  
 
-  console.log(cart);
-    //   const [loading, setLoading] = useState(true);
-    //   const [error, setError] = useState(null);
+  // console.log(cart);
+  //     const [loading, setLoading] = useState(true);
+  //     const [error, setError] = useState(null);
 
-    // console.log(data);
+  //   console.log(data);
 
-    // const calling = async () => {
-    //     const options = {
-    //         method: 'GET',
-    //         url: 'https://real-time-amazon-data.p.rapidapi.com/search',
-    //         params: {
-    //             query: 'Phone',
-    //             page: '1',
-    //             country: 'US',
-    //             sort_by: 'RELEVANCE',
-    //             product_condition: 'ALL'
-    //         },
-    //         headers: {
-    //             'x-rapidapi-key': 'cf2c7f000emsh3d1cd56c1ea499fp12a826jsn1503042f16aa',
-    //             'x-rapidapi-host': 'real-time-amazon-data.p.rapidapi.com'
-    //         }
-    //     };
+  //    const calling = async (val) => {
+  //       const options = {
+  //           method: 'GET',
+  //           url: 'https://real-time-amazon-data.p.rapidapi.com/search',
+  //           params: {
+  //               query: `${val}`,
+  //               page: '1',
+  //               country: 'US',
+  //               sort_by: 'RELEVANCE',
+  //               product_condition: 'ALL'
+  //           },
+  //           headers: {
+  //               'x-rapidapi-key': 'cf2c7f000emsh3d1cd56c1ea499fp12a826jsn1503042f16aa',
+  //               'x-rapidapi-host': 'real-time-amazon-data.p.rapidapi.com'
+  //           }
+  //       };
 
-    //     try {
-    //         const response = await axios.request(options);
-    //         console.log(response.data);
-    //     } catch (error) {
-    //         console.error(error);
-    //     }
+  //       try {
+  //           const response = await axios.request(options);
+  //           console.log(response.data);
+  //           const data = response.data;
+  //           if (data && data.data && data.data.products) {
+  //             setProducts(data.data.products);
+  //         }
+
+  //       } catch (error) {
+  //           console.error(error);
+  //       }
 
 
-    // }
-    //   useEffect(()=>{
-    //     calling();
-    //   },[]);
+  //   }
+  //     useEffect(()=>{
 
-    //   if (loading) return <p>Loading...</p>;
-    //   if (error) return <p>Error: {error.message}</p>;
+  //       calling();
+
+       
+  //     },[]);
+
+      // if (loading) return <p>Loading...</p>;
+      // if (error) return <p>Error: {error.message}</p>;
 
     useEffect(() => {
         // Access the products array from the imported data
@@ -78,7 +88,7 @@ function App() {
   return (
     <>
       <BrowserRouter>
-        <ecomContext.Provider value={{products , handleAddtoCart , cart , setCart , handleDeleteitem }}>
+        <ecomContext.Provider value={{products , handleAddtoCart , cart , setCart , handleDeleteitem , }}>
           <Header />
           <Routes>
             <Route path="/" element={<Home />}></Route>

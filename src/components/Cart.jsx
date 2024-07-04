@@ -3,7 +3,7 @@ import { ecomContext } from '../App'
 import { EmptyCart } from '../assets';
 import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
-import FooterBottom from './footer/FooterBottom';
+import Footer from './footer/Footer';
 
 function Cart() {
     const navigate = useNavigate();
@@ -124,7 +124,7 @@ function Cart() {
 
 
             </div>
-            <FooterBottom />
+            <Footer />
         </>
 
 
