@@ -107,7 +107,6 @@ function Header() {
               <option value="men">Men's</option>
               <option value="women">Women's</option>
               <option value="kids">Kid's</option>
-              <option value="girls">Girls's</option>
             </select>
           </div>
         </div>
