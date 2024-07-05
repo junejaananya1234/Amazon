@@ -103,9 +103,13 @@ function Cart() {
                                         <p>Total Price</p>
                                         <p className='text-right'>${totalPrice}</p>
                                     </div>
-                                    <button className='shadow-custom font-bold text-sm w-full mt-4 bg-[#f3a847] text-white py-2 rounded-md hover:bg-[#e69730] transition duration-300'>
-                                        Proceed to Checkout
-                                    </button>
+
+                                    <Link to="/proceedtocheckout">
+                                        <button className='shadow-custom font-bold text-sm w-full mt-4 bg-[#f3a847] text-white py-2 rounded-md hover:bg-[#e69730] transition duration-300'>
+                                            Proceed to Checkout
+                                        </button>
+                                    </Link>
+
                                 </div>
                             )}
                         </div>

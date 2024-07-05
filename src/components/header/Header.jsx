@@ -6,10 +6,16 @@ import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import LogoutIcon from '@mui/icons-material/Logout';
 import { Link } from 'react-router-dom';
 import { ecomContext } from '../../App';
+import MenuIcon from '@mui/icons-material/Menu';
 
 function Header() {
-  const { cart } = useContext(ecomContext);
-  const [input, setInput] = useState("");
+
+  function value(val){
+    console.log(val);
+  }
+
+  const { cart , calling } = useContext(ecomContext);
+
 
   return (
     <div className='w-full sticky top-0 z-50'>
@@ -40,7 +46,7 @@ function Header() {
               className='h-full text-base text-amazon_blue flex-grow outline-none border-none px-2'
               type="text"
             />
-            <span className='h-full w-12 flex items-center justify-center bg-amazon_yellow hover:bg-[#f3a847] duration-300 text-amazon_blue cursor-pointer rounded-tr-md rounded-br-md'>
+            <span onClick={(e) => calling(e.target.value)}  className='h-full w-12 flex items-center justify-center bg-amazon_yellow hover:bg-[#f3a847] duration-300 text-amazon_blue cursor-pointer rounded-tr-md rounded-br-md'>
               <SearchIcon />
             </span>
           </div>
@@ -57,7 +63,7 @@ function Header() {
 
           {/* returns div - hidden on small screens */}
           <div className='hidden md:flex flex-col items-start justify-center border border-transparent hover:border-white cursor-pointer p-2'>
-            <p className='text-light_text'>Returns</p>
+            <p className='text-light_text text-sm'>Returns</p>
             <p className='font-bold'>&Orders</p>
           </div>
 
@@ -84,8 +90,26 @@ function Header() {
       </div>
 
       {/* -----------------header bottom - hidden on small screens --------------- */}
-      <div className='hidden md:flex w-full bg-amazon_light_blue text-white px-6 py-2 items-center gap-5'>
-        <div>All</div>
+      <div className='w-full bg-amazon_light_blue text-white px-6 py-1'>
+        <div className=' md:flex w-full items-center gap-5 justify-between mt-4 md:mt-0  '>
+          <div className='w-full md:w-1/2 flex flex-wrap md:flex-nowrap justify-between font-semibold md:text-sm'>
+            <Link to="/"><button className="border border-transparent hover:border-white p-1 text-xs md:p-2 md:text-sm" value="shoes" onClick={(e) => calling(e.target.value)}>Shoes</button></Link>
+            <Link to="/"><button className="border border-transparent hover:border-white p-1 text-xs md:p-2 md:text-sm" value="watches" onClick={(e) => calling(e.target.value)} >Watches</button></Link>
+            <Link to="/"><button className="border border-transparent hover:border-white p-1 text-xs md:p-2 md:text-sm" value="clothes" onClick={(e) => calling(e.target.value)}>Clothes</button></Link>
+            <Link to="/"><button className="border border-transparent hover:border-white p-1 text-xs md:p-2 md:text-sm" value="phone" onClick={(e) => calling(e.target.value)} >Phones</button></Link>
+            <Link to="/"><button className="border border-transparent hover:border-white p-1 text-xs md:p-2 md:text-sm" value="furniture" onClick={(e) => calling(e.target.value)} >Furniture</button></Link>
+            <Link to="/"><button className="border border-transparent hover:border-white p-1 text-xs md:p-2 md:text-sm" value="grocery" onClick={(e) => calling(e.target.value)}>Groceries</button></Link>
+          </div>
+          <div className="hidden md:block bg-white rounded-sm shadow-md text-black mt-2 md:mt-0">
+            <select id="filter" onChange={(e)=>calling(e.target.value)} className=" border rounded-md w-full md:w-auto">
+              <option value="" disabled selected hidden className='font-semibold'>Filter</option>
+              <option value="men">Men's</option>
+              <option value="women">Women's</option>
+              <option value="kids">Kid's</option>
+              <option value="girls">Girls's</option>
+            </select>
+          </div>
+        </div>
       </div>
     </div>
   );

@@ -47,7 +47,7 @@ function UserProfile() {
                             onClick={handleLogout}
                             className='w-full bg-[#f3a847] hover:bg-[#e69730] text-white font-semibold py-2 px-4 rounded mt-4 shadow-custom'
                         >
-                            Log Out
+                            Sign out
                         </button>
                     </div>
                 ) : (

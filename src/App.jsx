@@ -6,6 +6,7 @@ import Signin from "./components/Signin"
 import Cart from "./components/Cart"
 import Registration from "./components/Registration"
 import UserProfile from "./components/UserProfile"
+import ProceedToCheckout from "./components/ProceedToCheckout"
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -101,6 +102,7 @@ function App() {
             <Route path="/cart" element={<Cart />}></Route>
             <Route path="/registration" element={<Registration />}></Route>
             <Route path="/userprofile" element={<UserProfile />}></Route>
+            <Route path="/proceedtocheckout" element={<ProceedToCheckout />}></Route>
           </Routes>
         </ecomContext.Provider>
       </BrowserRouter>
