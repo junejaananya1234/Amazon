@@ -45,6 +45,7 @@ function Header() {
             <input
               className='h-full text-base text-amazon_blue flex-grow outline-none border-none px-2'
               type="text"
+              onKeyUp={(e) => calling(e.target.value)}
             />
             <span onClick={(e) => calling(e.target.value)}  className='h-full w-12 flex items-center justify-center bg-amazon_yellow hover:bg-[#f3a847] duration-300 text-amazon_blue cursor-pointer rounded-tr-md rounded-br-md'>
               <SearchIcon />
