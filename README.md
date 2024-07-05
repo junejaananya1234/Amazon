@@ -71,3 +71,25 @@ Contributions are welcome! Please open an issue or submit a pull request.
 - [Firebase](https://firebase.google.com/)
 - [Stripe](https://stripe.com/)
 - [Amazon](https://amazon.com/) for inspiration
+
+# 🖼️Project outputs :
+
+### 📌Hero
+![Amazon-hero](https://github.com/Abhinandan411/Amazon-Clone-with-React/assets/131553633/52cc58e8-1d32-4ff4-a324-346d4350e929)
+
+### 📌Products 
+![Amazon-products-1](https://github.com/Abhinandan411/Amazon-Clone-with-React/assets/131553633/1f683c1c-e615-494b-979f-bbfdd7757220)
+![Amazon-product-2](https://github.com/Abhinandan411/Amazon-Clone-with-React/assets/131553633/b95f84fd-3cfb-4005-bae5-acf4cd4bf2e9)
+
+### 📌Footer 
+![Amazon-footer](https://github.com/Abhinandan411/Amazon-Clone-with-React/assets/131553633/41a1e0ec-8764-4e43-8f99-00f61868761f)
+
+### 📌Cart:
+![Amazon-cart](https://github.com/Abhinandan411/Amazon-Clone-with-React/assets/131553633/15764f50-da2d-4aa3-8de8-736da350f704)
+
+### 📌Create Account:
+![Amazon-create -account](https://github.com/Abhinandan411/Amazon-Clone-with-React/assets/131553633/858049f7-6950-43c3-9b40-be6604f06001)
+
+### 📌Sign in:
+![Amazon-signin](https://github.com/Abhinandan411/Amazon-Clone-with-React/assets/131553633/1b872b70-3107-442e-99fb-cad2b920d141)
+
