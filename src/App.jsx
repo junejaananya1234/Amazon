@@ -4,6 +4,7 @@ import Header from './components/header/Header'
 import Home from './components/Home'
 import Signin from "./components/Signin"
 import Cart from "./components/Cart"
+import FilteredProducts from "./components/Pages/FilteredProducts"
 import Registration from "./components/Registration"
 import UserProfile from "./components/UserProfile"
 import ProceedToCheckout from "./components/ProceedToCheckout"
@@ -12,6 +13,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import data from './data'
 import  axios  from "axios"
+import Footer from "./components/footer/Footer"
 
 
 export const ecomContext = createContext(null);
@@ -20,14 +22,17 @@ function App() {
 
 
   const [products, setProducts] = useState([]);
+  const [filteredProduct , setFilteredProduct] = useState([]);
   const [cart , setCart] = useState([]);
+
+  console.log(filteredProduct);
   
 
   console.log(cart);
       const [loading, setLoading] = useState(true);
       const [error, setError] = useState(null);
 
-    console.log(data);
+    // console.log(data);
 
      const calling = async (val) => {
       console.log(val);
@@ -91,20 +96,26 @@ function App() {
       toast.success("Item removed from Cart");
     }
 
+    function filterData (val) {
+      console.log(val);
+      setFilteredProduct(data.data.products[val]);
+    }
   return (
     <>
       <BrowserRouter>
-        <ecomContext.Provider value={{products , handleAddtoCart , cart , setCart , handleDeleteitem ,calling }}>
+        <ecomContext.Provider value={{products, filteredProduct , cart , handleAddtoCart ,  setCart , handleDeleteitem ,calling , filterData , }}>
         <ToastContainer />
           <Header />
           <Routes>
             <Route path="/" element={<Home />}></Route>
             <Route path="/signin" element={<Signin />}></Route>
             <Route path="/cart" element={<Cart />}></Route>
+            <Route path="/filteredproduct" element={<FilteredProducts />}></Route>
             <Route path="/registration" element={<Registration />}></Route>
             <Route path="/userprofile" element={<UserProfile />}></Route>
             <Route path="/proceedtocheckout" element={<ProceedToCheckout />}></Route>
           </Routes>
+          <Footer/>
         </ecomContext.Provider>
       </BrowserRouter>
 
@@ -113,4 +124,4 @@ function App() {
   )
 }
 
-export default App
+export default App;
