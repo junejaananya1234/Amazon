@@ -74,22 +74,18 @@ Contributions are welcome! Please open an issue or submit a pull request.
 
 # 🖼️Project outputs :
 
-### 📌Hero
-![Amazon-hero](https://github.com/Abhinandan411/Amazon-Clone-with-React/assets/131553633/52cc58e8-1d32-4ff4-a324-346d4350e929)
+
+### 📌Home Page :
+![NewAmazon-home](https://github.com/Abhinandan411/Amazon-Clone-with-React/assets/131553633/35143b86-12e8-41c0-9274-28b7fe5f052e)
 
 ### 📌Products 
-![Amazon-products-1](https://github.com/Abhinandan411/Amazon-Clone-with-React/assets/131553633/1f683c1c-e615-494b-979f-bbfdd7757220)
-![Amazon-product-2](https://github.com/Abhinandan411/Amazon-Clone-with-React/assets/131553633/b95f84fd-3cfb-4005-bae5-acf4cd4bf2e9)
-
-### 📌Footer 
-![Amazon-footer](https://github.com/Abhinandan411/Amazon-Clone-with-React/assets/131553633/41a1e0ec-8764-4e43-8f99-00f61868761f)
+![NewAmazonProduct](https://github.com/Abhinandan411/Amazon-Clone-with-React/assets/131553633/896a362b-3378-4d08-8d0e-3a1029effa3f)
 
 ### 📌Cart:
-![Amazon-cart](https://github.com/Abhinandan411/Amazon-Clone-with-React/assets/131553633/15764f50-da2d-4aa3-8de8-736da350f704)
+![NewAmazonCart](https://github.com/Abhinandan411/Amazon-Clone-with-React/assets/131553633/8e53d6b0-6ddc-488d-9e59-40d07545530e)
+
 
 ### 📌Create Account:
-![Amazon-create -account](https://github.com/Abhinandan411/Amazon-Clone-with-React/assets/131553633/858049f7-6950-43c3-9b40-be6604f06001)
+![NewAmaZonCreateAccount](https://github.com/Abhinandan411/Amazon-Clone-with-React/assets/131553633/bcc1cbee-3a7d-4f01-bd76-44d520528247)
 
-### 📌Sign in:
-![Amazon-signin](https://github.com/Abhinandan411/Amazon-Clone-with-React/assets/131553633/1b872b70-3107-442e-99fb-cad2b920d141)
 
