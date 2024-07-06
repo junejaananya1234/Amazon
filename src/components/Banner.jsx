@@ -14,7 +14,8 @@ const CustomPrevArrow = (props) => {
                 display: "block", 
                 left: "10px",
                 zIndex: 1, 
-                top:"10rem",
+                top: "50%", 
+                transform: "translateY(-50%)",
                 backgroundColor: "rgba(0, 0, 0, 0.5)", 
                 borderRadius: "50%", 
             }}
@@ -32,7 +33,8 @@ const CustomNextArrow = (props) => {
                 ...style, 
                 display: "block", 
                 right: "10px",
-                top:"10rem",
+                top: "50%", 
+                transform: "translateY(-50%)",
                 backgroundColor: "rgba(0, 0, 0, 0.5)", 
                 borderRadius: "50%", 
             }}
@@ -45,7 +47,7 @@ function Banner() {
     const [activeIndex, setActiveIndex] = useState(0);
 
     const settings = {
-        dots: false, // Disable dots
+        dots: false,
         infinite: true,
         speed: 500,
         slidesToShow: 1,
@@ -55,12 +57,12 @@ function Banner() {
         prevArrow: <CustomPrevArrow />,
         nextArrow: <CustomNextArrow />,
         beforeChange: (oldIndex, newIndex) => {
-            setActiveIndex(newIndex); // Update active index on slide change
+            setActiveIndex(newIndex);
         }
     };
 
     return (
-        <div className='w-full h-80 overflow-hidden'>
+        <div className='w-full h-auto overflow-hidden'>
             <div className="slider-container w-full h-full relative">
                 <Slider {...settings}>
                     <div>
@@ -77,6 +79,27 @@ function Banner() {
                     </div>
                 </Slider>
             </div>
+
+            {/* CSS for responsive height */}
+            <style>
+                {`
+                .slider-container {
+                    height: calc(100vw * 0.5); /* Adjust this ratio as needed */
+                }
+
+                @media (min-width: 640px) {
+                    .slider-container {
+                        height: calc(100vw * 0.4); /* Adjust this ratio as needed for larger screens */
+                    }
+                }
+
+                @media (min-width: 1024px) {
+                    .slider-container {
+                        height: calc(100vw * 0.3); /* Adjust this ratio as needed for even larger screens */
+                    }
+                }
+                `}
+            </style>
         </div>
     );
 }
