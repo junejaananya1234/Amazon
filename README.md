@@ -1,6 +1,6 @@
 # 🛒Amazon Clone ( A ecommerce website  )
 
-# [Live Link: ]()
+# [Live Link: ](https://bespoke-squirrel-543289.netlify.app/)
  
  ## 🏷️Features
 
