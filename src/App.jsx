@@ -67,7 +67,7 @@ function App() {
 
   }
   useEffect(() => {
-    // calling();
+    calling();
   }, []);
 
   // if (loading) return <p>Loading...</p>;
