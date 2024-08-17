@@ -72,20 +72,6 @@ Contributions are welcome! Please open an issue or submit a pull request.
 - [Stripe](https://stripe.com/)
 - [Amazon](https://amazon.com/) for inspiration
 
-# 🖼️Project outputs :
 
-
-### 📌Home Page :
-![NewAmazon-home](https://github.com/Abhinandan411/Amazon-Clone-with-React/assets/131553633/35143b86-12e8-41c0-9274-28b7fe5f052e)
-
-### 📌Products 
-![NewAmazonProduct](https://github.com/Abhinandan411/Amazon-Clone-with-React/assets/131553633/896a362b-3378-4d08-8d0e-3a1029effa3f)
-
-### 📌Cart:
-![NewAmazonCart](https://github.com/Abhinandan411/Amazon-Clone-with-React/assets/131553633/8e53d6b0-6ddc-488d-9e59-40d07545530e)
-
-
-### 📌Create Account:
-![NewAmaZonCreateAccount](https://github.com/Abhinandan411/Amazon-Clone-with-React/assets/131553633/bcc1cbee-3a7d-4f01-bd76-44d520528247)
 
 
