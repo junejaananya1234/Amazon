@@ -47,7 +47,7 @@ function Header() {
               Deliver to
             </p>
             <p>
-              Abhinandan <span>India</span>
+               <span>India</span>
             </p>
           </div>
 

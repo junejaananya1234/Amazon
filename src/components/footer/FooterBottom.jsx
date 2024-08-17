@@ -80,7 +80,7 @@ function FooterBottom() {
                         © 1996-2023, Amazon.com, Inc. or its affiliates
                     </h3>
                     <h3 className="font-semibold text-[11px] text-[#DDD] mb-[2px]">
-                        all rightd reserved by: <a className='hover:underline' href="https://github.com/Abhinandan411">Abhinandan</a>
+                        all rightd reserved by: <a className='hover:underline'>Ananya</a>
                     </h3>
                 </div>
 
